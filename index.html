@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith & Fire Survival LLC</title>
+<meta name="description" content="Faith & Fire Survival LLC offers outdoor survival training grounded in Biblical principles. Learn wilderness skills, firecraft, navigation, and more.">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ========================= GLOBAL RESET ========================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Merriweather', serif;
+  color: #2f2b23;
+  background: url('wood.jpg') no-repeat center center fixed;
+  background-size: cover;
+  transition: background 0.4s, color 0.4s;
+}
+body.dark-mode { background: #1e1b17; color: #f0e6d8; }
+body::before {
+  content:""; position:fixed; inset:0; background: rgba(0,0,0,0.38); z-index:-1;
+}
+
+/* ========================= NAVIGATION ========================= */
+nav {
+  position: fixed; top:0; width:100%; background: rgba(241,228,200,0.94); backdrop-filter: blur(6px);
+  padding:12px 20px; display:flex; justify-content:space-between; align-items:center; z-index:9999;
+  border-bottom:2px solid rgba(0,0,0,0.15); transition:0.4s;
+}
+body.dark-mode nav { background: rgba(40,35,30,0.95); }
+.nav-title { font-family: 'Montserrat', sans-serif; font-size:1.25rem; font-weight:700; color:#3a2f1f; }
+body.dark-mode .nav-title { color:#f0e6d8; }
+.nav-links { display:flex; gap:30px; }
+.nav-links a { text-decoration:none; color:#3a2f1f; font-family:'Montserrat'; font-weight:600; transition:0.2s; }
+body.dark-mode .nav-links a { color:#f0e6d8; }
+.nav-links a:hover { opacity:0.6; }
+
+/* Hamburger */
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.hamburger div { width:25px; height:3px; background:#3a2f1f; transition:0.3s; }
+body.dark-mode .hamburger div { background:#f0e6d8; }
+
+/* Mobile Menu */
+.mobile-menu { display:none; flex-direction:column; background: rgba(241,228,200,0.96); border-bottom:2px solid rgba(0,0,0,0.2); padding:20px; }
+body.dark-mode .mobile-menu { background: rgba(40,35,30,0.96); }
+.mobile-menu a { color:#3a2f1f; padding:10px 0; font-family:'Montserrat'; font-weight:600; text-decoration:none; }
+body.dark-mode .mobile-menu a { color:#f0e6d8; }
+@media(max-width:820px) { .nav-links{display:none;} .hamburger{display:flex;} }
+
+/* Dark Mode Toggle */
+.dark-mode-toggle { cursor:pointer; font-size:1.4rem; margin-left:20px; user-select:none; transition:0.3s; }
+.dark-mode-toggle:hover { opacity:0.7; }
+
+/* ========================= HERO ========================= */
+.hero { padding:160px 20px 80px; text-align:center; }
+.hero-content { max-width:900px; margin:auto; background:rgba(241,228,200,0.9); padding:40px; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,0.45); transition:0.4s; }
+body.dark-mode .hero-content { background: rgba(50,45,40,0.9); }
+.hero img { width:300px; max-width:80%; border-radius:50%; border:4px solid rgba(255,255,255,0.85); box-shadow:0 6px 14px rgba(0,0,0,0.5); margin-bottom:20px; }
+.hero h1 { font-size:2.8rem; margin-bottom:10px; }
+.hero p { font-size:1.2rem; font-family:'Montserrat'; margin-bottom:20px; }
+.cta-button { display:inline-block; padding:14px 28px; background:#5b3e1e; color:#f1e4c8; border-radius:10px; font-size:1.1rem; text-decoration:none; transition:0.3s; }
+.cta-button:hover { background:#7a5328; }
+
+/* ========================= SECTIONS ========================= */
+section { max-width:1000px; margin:50px auto; padding:50px; background: rgba(241,228,200,0.92); border-radius:16px; box-shadow:0 6px 14px rgba(0,0,0,0.28); transition:0.4s; }
+body.dark-mode section { background: rgba(45,40,35,0.9); }
+h2 { text-align:center; font-size:2rem; margin-bottom:25px; }
+
+/* ========================= GALLERY ========================= */
+.gallery { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+.gallery img { width:100%; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.3); transition:0.25s; }
+.gallery img:hover { transform:scale(1.03); }
+
+/* ========================= TESTIMONIALS ========================= */
+.testimonials { display:flex; flex-direction:column; gap:25px; }
+.testimonial { background: rgba(255,255,255,0.75); padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.25); font-family:'Montserrat'; transition:0.4s; }
+body.dark-mode .testimonial { background: rgba(60,55,50,0.8); }
+.testimonial p { font-size:1.1rem; margin-bottom:10px; }
+.testimonial .author { font-weight:700; font-style:italic; text-align:right; }
+
+/* ========================= ABOUT ========================= */
+.about-container { display:grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:30px; }
+.instructor img {
+  width: 100%;
+  height: 350px;      /* Makes both images the same size */
+  object-fit: cover;  /* Prevents stretching */
+  border-radius: 12px;
+  margin-bottom: 10px; }
+
+/* ========================= CONTACT ========================= */
+.contact-card { background: rgba(255,255,255,0.75); max-width:700px; margin:auto; padding:35px; border-radius:16px; box-shadow:0 6px 14px rgba(0,0,0,0.25); }
+body.dark-mode .contact-card { background: rgba(60,55,50,0.75); }
+.contact-row { display:flex; gap:15px; flex-wrap:wrap; margin-bottom:15px; }
+.contact-card input, .contact-card textarea { width:100%; padding:14px; border-radius:10px; border:1px solid #8b7f6b; font-size:1rem; background:#ffffff; }
+body.dark-mode .contact-card input, body.dark-mode .contact-card textarea { background:#2d2925; color:#f0e6d8; border:1px solid #b7a996; }
+button { width:100%; padding:14px; font-size:1.1rem; border-radius:10px; background:#5b3e1e; color:#f1e4c8; border:2px solid #8b7f6b; cursor:pointer; }
+button:hover { background:#7a5328; }
+
+/* ========================= FOOTER ========================= */
+footer { background:#3c2e1e; color:white; text-align:center; padding:25px; margin-top:50px; }
+body.dark-mode footer { background:#1d1a17; }
+
+/* VISUALLY HIDDEN LABELS */
+.visually-hidden { position:absolute; left:-9999px; }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-title">Faith & Fire Survival</div>
+  <div class="nav-links">
+    <a href="#mission">Mission</a>
+    <a href="#services">Training</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</div>
+  <div class="hamburger" id="hamburger" aria-label="Menu Toggle"><div></div><div></div><div></div></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#mission">Mission</a>
+  <a href="#services">Training</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <img src="logo.png" alt="Faith & Fire Survival Logo" loading="lazy">
+    <h1>Faith & Fire Survival LLC</h1>
+    <p>Outdoor survival training built on Biblical truth and real-world skills.</p>
+    <a href="#contact" class="cta-button">Book a Session</a>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <h2>Our Mission</h2>
+  <p>The wilderness builds character, courage, and clarity. At Faith & Fire Survival LLC, we teach practical, life-saving outdoor skills grounded in Biblical principles.</p>
+</section>
+
+<!-- TRAINING -->
+<section id="services">
+  <h2>Training & Workshops</h2>
+  <ul>
+    <li>• Wilderness survival fundamentals</li>
+    <li>• Shelter building & firecraft</li>
+    <li>• Water sourcing & purification</li>
+    <li>• Navigation & land reading</li>
+    <li>• Wilderness devotionals & leadership</li>
+    <li>• Family, youth, and group survival courses</li>
+  </ul>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="first-aid.jpg" alt="First Aid" loading="lazy">
+    <img src="compass.jpg" alt="Navigation Class" loading="lazy">
+    <img src="firecraft.jpg" alt="Firecraft Workshop" loading="lazy">
+    <img src="water.jpg" alt="Water Purification" loading="lazy">
+    <img src="course.jpg" alt="Survival Course" loading="lazy">
+    <img src="devotional.jpg" alt="Wilderness Devotional" loading="lazy">
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <h2>Student Experiences</h2>
+  <div class="testimonials">
+    <article class="testimonial">
+      <p>“I brought my teenage sons to this course and it changed the way we bond outdoors. The Biblical teaching tied everything together beautifully.”</p>
+      <div class="author">— Michelle R.</div>
+    </article>
+    <article class="testimonial">
+      <p>“Derek and Andy are incredible instructors. Their knowledge is deep but their teaching style makes everything approachable.”</p>
+      <div class="author">— Jonathan P.</div>
+    </article>
+    <article class="testimonial">
+      <p>“I never knew how empowering it would feel to learn real wilderness skills. This training will stay with me for life.”</p>
+      <div class="author">— Naomi S.</div>
+    </article>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>Faith & Fire Survival LLC is led by two experienced outdoor survival instructors who are passionate about teaching practical wilderness skills rooted in Biblical principles.</p>
+  <div class="about-container">
+    <article class="instructor">
+      <img src="Derek.jpg" alt="Derek Haber" loading="lazy">
+      <h3>Derek Haber</h3>
+      <p>  Derek brings more than 25 years of expertise in wilderness survival and outdoor leadership, specializing in navigation, search and rescue, and emergency preparedness. As a Civil Air Patrol Captain and licensed Ham radio operator, he combines practical survival skills with advanced communication strategies to ensure safety and confidence in the outdoors. Derek’s approach integrates proven survival techniques with timeless biblical principles, equipping individuals and groups to thrive in challenging environments while fostering faith, resilience, and purpose.</p>
+    </article>
+    <article class="instructor">
+      <img src="Andy.jpg" alt="Andy Bell" loading="lazy">
+      <h3>Andy Bell</h3>
+      <p>Andy is an accomplished outdoor educator and licensed Ham radio operator with over a decade of experience in hiking, backcountry camping, and wilderness survival. He specializes in equipping individuals with practical survival skills while fostering personal and spiritual growth through biblical mentorship. Andy’s unique blend of technical expertise and leadership has helped students thrive in challenging environments and develop confidence both in the outdoors and in life.</p>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-card">
+    <form id="contact-form" action="https://formspree.io/f/xrboeeqp" method="POST">
+      <div class="contact-row">
+        <label for="name" class="visually-hidden">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <label for="email" class="visually-hidden">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <label for="message" class="visually-hidden">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-message" style="display:none; margin-top:10px; color:green; text-align:center;">
+      Thank you! Your message has been sent.
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>© 2025 Faith & Fire Survival LLC — All rights reserved.</footer>
+
+<script>
+// Mobile Menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+});
+
+// Dark Mode
+const toggle = document.getElementById('darkModeToggle');
+let dark = localStorage.getItem("darkMode") === "true";
+const applyDarkMode = (val) => {
+  if(val){ document.body.classList.add("dark-mode"); toggle.textContent="☀️"; }
+  else{ document.body.classList.remove("dark-mode"); toggle.textContent="🌙"; }
+};
+applyDarkMode(dark);
+toggle.addEventListener("click", () => {
+  dark = !dark; localStorage.setItem("darkMode", dark); applyDarkMode(dark);
+});
+
+// Contact Form
+const form = document.getElementById('contact-form');
+const msg = document.getElementById('form-message');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  fetch(form.action, { method:'POST', body: new FormData(form), headers:{ 'Accept':'application/json' } })
+    .then(()=>{ msg.style.display='block'; form.reset(); });
+});
+</script>
+
+</body>
+</html>
