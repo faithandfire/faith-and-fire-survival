@@ -1,3 +1,4 @@
+
 /* ========================= GLOBAL RESET ========================= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -50,12 +51,28 @@ body.dark-mode .mobile-menu a { color:#f0e6d8; }
 body.dark-mode .hero-content { background: rgba(50,45,40,0.9); }
 .hero img { width:280px; max-width:80%; border-radius:50%; border:4px solid rgba(255,255,255,0.85); box-shadow:0 6px 14px rgba(0,0,0,0.5); margin-bottom:20px; }
 .hero h1 { font-size:2.6rem; margin-bottom:12px; }
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
 .hero p { font-size:1.15rem; font-family:'Montserrat'; margin-bottom:20px; }
 .cta-button { display:inline-block; padding:14px 28px; background:#5b3e1e; color:#f1e4c8; border-radius:10px; font-size:1.1rem; text-decoration:none; transition:0.3s; }
 .cta-button:hover { background:#7a5328; }
 
 /* ========================= SECTIONS ========================= */
 section { max-width:1000px; margin:50px auto; padding:50px; background: rgba(241,228,200,0.92); border-radius:16px; box-shadow:0 6px 14px rgba(0,0,0,0.28); transition:0.4s; }
+/* ========================= PRICING SECTION ========================= */
+#pricing h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
 body.dark-mode section { background: rgba(45,40,35,0.9); }
 h2 { text-align:center; font-size:2rem; margin-bottom:25px; }
 
@@ -156,3 +173,16 @@ body.dark-mode footer { background:#1d1a17; }
 
 /* VISUALLY HIDDEN LABELS */
 .visually-hidden { position:absolute; left:-9999px; }
+
+.mobile-menu {
+  position: fixed;
+  top: 64px;
+  height: calc(100vh - 64px);
+  transform: translateY(-120%);
+}
+.mobile-menu.active {
+  transform: translateY(0);
+}
+
+.cta-section { text-align:center; }
+.scripture { text-align:center; font-style:italic; }

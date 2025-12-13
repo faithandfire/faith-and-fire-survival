@@ -1,25 +1,26 @@
-// ====================== MOBILE MENU ======================
+// MOBILE MENU
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
 if (hamburger && mobileMenu) {
   hamburger.addEventListener('click', () => {
-    mobileMenu.style.display = mobileMenu.style.display === "flex" ? "none" : "flex";
+    mobileMenu.classList.toggle('active');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
   });
 }
 
-// ====================== DARK MODE ======================
+// DARK MODE
 const toggle = document.getElementById('darkModeToggle');
 let dark = localStorage.getItem("darkMode") === "true";
 
-const applyDarkMode = (val) => {
-  if (val) {
-    document.body.classList.add("dark-mode");
-    if (toggle) toggle.textContent = "☀️";
-  } else {
-    document.body.classList.remove("dark-mode");
-    if (toggle) toggle.textContent = "🌙";
-  }
+const applyDarkMode = val => {
+  document.body.classList.toggle("dark-mode", val);
+  if (toggle) toggle.textContent = val ? "☀️" : "🌙";
 };
 
 applyDarkMode(dark);
@@ -32,22 +33,14 @@ if (toggle) {
   });
 }
 
-// ====================== CONTACT FORM ======================
+// CONTACT FORM
 const form = document.getElementById('contact-form');
 const msg = document.getElementById('form-message');
 
 if (form) {
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', e => {
     e.preventDefault();
-
-    fetch(form.action, {
-      method:'POST',
-      body: new FormData(form),
-      headers:{ 'Accept':'application/json' }
-    })
-    .then(() => {
-      if (msg) msg.style.display = 'block';
-      form.reset();
-    });
+    fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} })
+      .then(() => { msg.style.display = 'block'; form.reset(); });
   });
 }
