@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Faith & Fire Survival</title>
+<title>Contact — Faith & Fire Survival</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -40,40 +40,23 @@
   <a href="contact.html">Contact</a>
 </div>
 
-
 <main>
 
 <section class="hero">
   <div class="hero-content">
-    <img src="images/logo.png">
-    <h1>Our Mission & Instructors</h1>
-    <p><strong>Training rooted in faith, discipline, and stewardship.</strong></p>
-    <a href="training.html" class="cta-button">View Training</a>
+    <h1>Get in Touch</h1>
+    <p><strong>Tell us about your group and training needs.</strong></p>
   </div>
-</section>
-
-<section class="scripture">
-  <p>“Be watchful, stand firm in the faith, act like men, be strong.”</p>
-  <span>— 1 Corinthians 16:13</span>
 </section>
 
 <section>
-  <h2>Our Team</h2>
-  <div class="about-container">
-    <!-- Derek -->
-    <article class="instructor">
-      <img src="images/Derek.jpg" class="about-img">
-      <h3>Derek Haber</h3>
-      <p>Derek brings more than 25 years of expertise in wilderness survival, navigation, search & rescue, and emergency preparedness. His approach integrates proven survival techniques with timeless biblical principles, equipping individuals to thrive while fostering faith, resilience, and purpose.</p>
-    </article>
-
-    <!-- Andy -->
-    <article class="instructor">
-      <img src="images/Andy.jpg" class="about-img">
-      <h3>Andy Bell</h3>
-      <p>Andy is an accomplished outdoor educator specializing in hiking, backcountry camping, and wilderness survival. He mentors students in both technical skills and spiritual growth, helping them develop confidence in the outdoors and in life.</p>
-    </article>
-  </div>
+  <form id="contact-form" action="https://formspree.io/f/xrboeeqp" method="POST" class="contact-card">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="form-message" style="display:none;">Thank you! Your message has been sent.</p>
+  </form>
 </section>
 
 </main>
