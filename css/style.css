@@ -35,7 +35,7 @@ body.dark-mode .nav-links a { color:#f0e6d8; }
 body.dark-mode .hamburger div { background:#f0e6d8; }
 
 /* Mobile Menu */
-.mobile-menu { display:none; flex-direction:column; background: rgba(241,228,200,0.96); border-bottom:2px solid rgba(0,0,0,0.2); padding:20px; }
+.mobile-menu { display:flex; flex-direction:column; background: rgba(241,228,200,0.96); border-bottom:2px solid rgba(0,0,0,0.2); padding:20px; }
 body.dark-mode .mobile-menu { background: rgba(40,35,30,0.96); }
 .mobile-menu a { color:#3a2f1f; padding:10px 0; font-family:'Montserrat'; font-weight:600; text-decoration:none; }
 body.dark-mode .mobile-menu a { color:#f0e6d8; }
