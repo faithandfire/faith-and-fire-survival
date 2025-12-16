@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery — Faith & Fire Survival</title>
+<meta name="description" content="Gallery of moments from our training and community at Faith & Fire Survival.">
 
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -14,7 +15,6 @@
 <!-- NAVIGATION -->
 <nav>
   <div class="nav-title">Faith & Fire Survival</div>
-
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="training.html">Training</a>
@@ -22,14 +22,8 @@
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </div>
-
-  <div class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</div>
-
-  <div class="hamburger" id="hamburger" aria-label="Menu Toggle">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <div class="dark-mode-toggle" id="darkModeToggle">🌙</div>
+  <div class="hamburger" id="hamburger"><div></div><div></div><div></div></div>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
@@ -42,46 +36,55 @@
 
 <main>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <img src="images/logo.png">
+    <img src="images/logo.png" alt="Faith & Fire Logo" loading="lazy" style="max-width:280px; border-radius:50%;">
     <h1>Faith & Fire in Action</h1>
     <p><strong>Moments from our training and community.</strong></p>
     <a href="contact.html" class="cta-button">Join a Training</a>
   </div>
 </section>
 
-<section id="gallery">
+<!-- GALLERY -->
+<section class="gallery-programs">
   <h2>Gallery</h2>
   <div class="gallery-grid">
-     <figure>
-      <img src="images/first-aid.jpg" alt="First Aid">
+
+    <figure class="gallery-item">
+      <img src="images/first-aid.jpg" alt="First Aid" loading="lazy">
       <figcaption>First Aid</figcaption>
     </figure>
-    <figure>
-      <img src="images/compass.jpg" alt="Navigation Class">
+
+    <figure class="gallery-item">
+      <img src="images/compass.jpg" alt="Navigation Skills" loading="lazy">
       <figcaption>Navigation Skills</figcaption>
     </figure>
-    <figure>
-      <img src="images/firecraft.jpg" alt="Firecraft Workshop">
+
+    <figure class="gallery-item">
+      <img src="images/firecraft.jpg" alt="Firecraft Training" loading="lazy">
       <figcaption>Firecraft Training</figcaption>
     </figure>
-    <figure>
-      <img src="images/water.jpg" alt="Water Purification">
+
+    <figure class="gallery-item">
+      <img src="images/water.jpg" alt="Water Purification" loading="lazy">
       <figcaption>Water Purification</figcaption>
     </figure>
-    <figure>
-      <img src="images/course.jpg" alt="Survival Course">
+
+    <figure class="gallery-item">
+      <img src="images/course.jpg" alt="Survival Course" loading="lazy">
       <figcaption>Survival Course</figcaption>
     </figure>
-    <figure>
-      <img src="images/devotional.jpg" alt="Wilderness Devotional">
+
+    <figure class="gallery-item">
+      <img src="images/devotional.jpg" alt="Wilderness Devotional" loading="lazy">
       <figcaption>Wilderness Devotional</figcaption>
     </figure>
-    <!-- Add more images in the same pattern -->
+
   </div>
 </section>
 
+<!-- CTA SECTION -->
 <section class="cta-section">
   <h2>Want to Learn These Skills?</h2>
   <a href="contact.html" class="cta-button">Contact Us</a>
@@ -90,6 +93,6 @@
 </main>
 
 <footer>© 2025 Faith & Fire Survival LLC</footer>
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

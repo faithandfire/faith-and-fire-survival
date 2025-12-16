@@ -15,7 +15,6 @@
 <!-- NAVIGATION -->
 <nav>
   <div class="nav-title">Faith & Fire Survival</div>
-
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="training.html">Training</a>
@@ -23,14 +22,8 @@
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </div>
-
-  <div class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">🌙</div>
-
-  <div class="hamburger" id="hamburger" aria-label="Menu Toggle">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <div class="dark-mode-toggle" id="darkModeToggle">🌙</div>
+  <div class="hamburger" id="hamburger"><div></div><div></div><div></div></div>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
@@ -43,27 +36,75 @@
 
 <main>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <img src="images/logo.png" alt="Faith & Fire Survival Logo">
+    <img src="images/logo.png" alt="Faith & Fire Survival Logo" loading="lazy">
     <h1>Survival & Preparedness Training</h1>
     <p><strong>Hands-on training designed to build skill, confidence, and faith.</strong></p>
     <a href="contact.html" class="cta-button">Request Training</a>
   </div>
 </section>
 
-<section>
+<!-- TRAINING PROGRAMS -->
+<section class="training-programs">
   <h2>Our Training Programs</h2>
-  <ul>
-    <li>Wilderness survival fundamentals</li>
-    <li>Shelter building & firecraft</li>
-    <li>Water sourcing & purification</li>
-    <li>Navigation & land reading</li>
-    <li>Wilderness devotionals & leadership development</li>
-    <li>Family, youth, and group survival training</li>
-  </ul>
 
-  <a href="contact.html" class="cta-button">Contact Us</a>
+  <div class="gallery-grid">
+
+    <figure class="gallery-item">
+      <img src="images/first-aid.jpg" alt="First Aid" loading="lazy">
+      <figcaption>First Aid</figcaption>
+      <div class="gallery-desc">
+        <p>Hands-on wilderness first aid covering bleeding control, fractures, patient assessment, and emergency decision-making in remote environments.</p>
+      </div>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="images/compass.jpg" alt="Navigation Skills" loading="lazy">
+      <figcaption>Navigation Skills</figcaption>
+      <div class="gallery-desc">
+        <p>Learn map reading, compass skills, GPS basics, and navigation strategies to safely traverse the wilderness.</p>
+      </div>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="images/firecraft.jpg" alt="Firecraft Training" loading="lazy">
+      <figcaption>Firecraft Training</figcaption>
+      <div class="gallery-desc">
+        <p>Master fire-starting using both primitive and modern techniques, including fuel selection and safety principles.</p>
+      </div>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="images/water.jpg" alt="Water Purification" loading="lazy">
+      <figcaption>Water Purification</figcaption>
+      <div class="gallery-desc">
+        <p>Practical training on finding, filtering, and purifying water in the wild, using natural and portable methods.</p>
+      </div>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="images/course.jpg" alt="Survival Course" loading="lazy">
+      <figcaption>Survival Course</figcaption>
+      <div class="gallery-desc">
+        <p>Comprehensive 1-day survival course combining shelter, fire, water, food, and biblical principles of preparation and stewardship.</p>
+      </div>
+    </figure>
+
+    <figure class="gallery-item">
+      <img src="images/devotional.jpg" alt="Wilderness Devotional" loading="lazy">
+      <figcaption>Wilderness Devotional</figcaption>
+      <div class="gallery-desc">
+        <p>Reflect and grow spiritually in the outdoors, integrating scripture and prayer into the wilderness experience.</p>
+      </div>
+    </figure>
+
+  </div>
+
+  <p style="text-align:center; margin-top:30px;">
+    <a href="contact.html" class="cta-button">Request Training</a>
+  </p>
 </section>
 <section id="pricing">
   <h2>Pricing</h2>
@@ -91,10 +132,9 @@
   </p>
 </section>
 
-
 </main>
 
 <footer>© 2025 Faith & Fire Survival LLC</footer>
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
