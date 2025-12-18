@@ -113,6 +113,7 @@ body.dark-mode .mobile-menu a { color: var(--color-dark-text); }
   padding: 140px 20px 80px;
   text-align: center;
 }
+
 .hero-content {
   max-width: 850px;
   margin: auto;
@@ -132,9 +133,30 @@ body.dark-mode .hero-content { background: rgba(50,45,40,0.9); }
   box-shadow: 0 6px 14px rgba(0,0,0,0.5);
   margin-bottom: 20px;
 }
+
 .hero h1 { font-size: 2.6rem; margin-bottom: 12px; }
-.hero-subtitle { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 14px; opacity: 0.9; }
+
+/* Hero Subtitle */
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+/* Hero Description (who it's for & mission statement) */
+.hero-description {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
 .hero p { font-size: 1.15rem; font-family: 'Montserrat', margin-bottom: 20px; }
+
 
 /* CTA BUTTONS */
 .cta-button {
@@ -260,6 +282,23 @@ button {
   cursor: pointer;
 }
 button:hover { background: var(--color-accent-hover); }
+.about-mission {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.about-mission h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.about-mission p {
+  font-family: 'Merriweather', serif;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
 
 /* ========================= ABOUT / TEAM ========================= */
 .about-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
