@@ -1,113 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faith & Fire Survival LLC</title>
-<meta name="description" content="Christ-centered survival and preparedness training grounded in Biblical principles.
-Serving the Kansas City metro area.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Faith & Fire Survival — Ministry</title>
+  <meta name="description" content="Faith-based survival training equipping individuals and families to be ready—spiritually and practically.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.min.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div data-include="partials/header.html"></div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-title">Faith & Fire Survival</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="training.html">Training</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="dark-mode-toggle" id="darkModeToggle">🌙</div>
-  <div class="hamburger" id="hamburger"><div></div><div></div><div></div></div>
-</nav>
+  <section class="hero" aria-label="Hero">
+    <div class="container inner">
+      <div class="lede">
+        <h1>Prepare the Heart. Strengthen the Body. Serve with Purpose.</h1>
+        <p>Faith‑based survival training equipping individuals and families to be ready—spiritually and practically—so they can serve others with wisdom and courage when it matters most.</p>
+        <div class="actions" style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn primary" href="contact.html">Join the Mission</a>
+          <a class="btn ghost" href="programs.html">Request Training</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="training.html">Training</a>
-  <a href="about.html">About</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
-</div>
+  <main id="main">
+    <section id="mission" aria-labelledby="mission-title">
+      <div class="container">
+        <h2 id="mission-title" class="section-title">Ministry Mission</h2>
+        <div class="grid grid-2">
+          <div class="panel">
+            <p><strong>Our mission</strong> is to unite biblical teaching with practical survival skills, helping people face uncertainty with resilience, discernment, and faith.</p>
+            <p>Preparedness isn’t fear—it’s stewardship. We equip believers to care for their families and serve their communities in times of need.</p>
+          </div>
+          <div class="panel">
+            <h3>Our Approach</h3>
+            <p>Every skill we teach is paired with a biblical principle. We train hearts and hands: Scripture‑anchored mindset, situational awareness, and essential skills for the outdoors and emergencies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<main>
+    <section id="teach" aria-labelledby="teach-title">
+      <div class="container">
+        <h2 id="teach-title" class="section-title">What We Teach</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Faith &amp; Biblical Readiness</h3>
+            <p class="muted">Scripture‑based resilience, leadership, and spiritual disciplines that shape wise, steady responses.</p>
+          </article>
+          <article class="card">
+            <h3>Survival Skills &amp; Safety</h3>
+            <p class="muted">Navigation, shelter, firecraft, water, first‑aid fundamentals, and practical emergency readiness.</p>
+          </article>
+          <article class="card">
+            <h3>Family &amp; Community Preparedness</h3>
+            <p class="muted">Plans, checklists, and drills for households and small groups—built for real life.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <img src="images/logo.png" alt="Faith & Fire Survival Logo">
-    <h1>Faith & Fire Survival LLC</h1>
-    <h2 class="hero-subtitle">Christ-Centered Survival & Preparedness Training</h2>
-     <p class="hero-description">
-      Serving churches, youth groups, families, and outdoor ministries in the Kansas City metro area.<br>
-    
-    </p>
-    
-    <a href="contact.html" class="cta-button">Book Training</a>
-  </div>
-</section>
+    <section aria-labelledby="impact-title">
+      <div class="container">
+        <div class="panel" style="background:linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,.5)), url('assets/testimony-bg.jpg') center/cover no-repeat; color:#fff;">
+          <h2 id="impact-title" class="section-title" style="color:var(--gold)">Impact</h2>
+          <blockquote style="margin:0; font-size: clamp(1.1rem, 1.2rem + .8vw, 1.6rem)">
+            “The biblical principles and practical training gave our church confidence and clarity. Our families are more prepared—and more at peace.”
+            <footer style="margin-top:.75rem; font-size:.95rem; opacity:.9">— Ministry Leader, Missouri</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
 
-<!-- SCRIPTURE -->
-<section class="scripture">
-  <p>“The prudent see danger and take refuge, but the simple keep going and suffer for it.”</p>
-  <span>— Proverbs 22:3</span>
-</section>
+    <section aria-label="Call to action">
+      <div class="container cta-band">
+        <p><strong>Ready to strengthen your faith and preparedness?</strong></p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn primary" href="contact.html">Book a Consultation</a>
+          <a class="btn ghost" href="contact.html">Invite Us to Your Church</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<!-- MISSION -->
-<section>
-  <h2>Our Mission</h2>
-  <p>Faith & Fire Survival equips men and women with hands-on wilderness and preparedness training while cultivating faith, discipline, and stewardship rooted in biblical truth.</p>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <h2>What Our Students Say</h2>
-
-  <article class="testimonial">
-    <p>"I never thought I could build a fire from scratch, but their hands-on approach made it simple and fun. Highly recommended!"</p>
-    <div class="author">— Sarah K.</div>
-  </article>
-
-  <article class="testimonial">
-    <p>"The wilderness devotional and leadership training really strengthened our team spiritually and practically."</p>
-    <div class="author">— Mike R.</div>
-  </article>
-
-  <article class="testimonial">
-    <p>"Perfect balance of outdoor skills and faith-based guidance. Our youth group loved every moment."</p>
-    <div class="author">— Jessica L.</div>
-  </article>
-</section>
-
-<!-- PRICING SUMMARY -->
-<section class="pricing-summary">
-  <h2>Training & Pricing</h2>
-  <p>Pricing varies depending on group type. <a href="training.html">See detailed pricing and programs</a>.</p>
-  <a href="contact.html" class="cta-button">Request a Quote</a>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2>Ready to Train?</h2>
-  <p>Tell us about your group and we’ll help you plan the right training.</p>
-  <a href="contact.html" class="cta-button">Contact Us</a>
-</section>
-
-</main>
-
-<footer>Serving Jackson & Clay County, Missouri<br>
-© 2025 Faith & Fire Survival LLC — All rights reserved.</footer>
-
-<script src="js/main.js" defer></script>
+  <div data-include="partials/footer.html"></div>
+  <script src="assets/scripts.js"></script>
 </body>
 </html>
