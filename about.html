@@ -1,108 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Faith & Fire Survival</title>
-<meta name="description" content="Meet the instructors and learn about the mission of Faith & Fire Survival.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Faith & Fire Survival</title>
+  <meta name="description" content="Learn about the mission, story, and values behind Faith & Fire Survival.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.min.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div data-include="partials/header.html"></div>
 
-<!-- NAVIGATION -->
-<nav>
-  <div class="nav-title">Faith & Fire Survival</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="training.html">Training</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="dark-mode-toggle" id="darkModeToggle">🌙</div>
-  <div class="hamburger" id="hamburger"><div></div><div></div><div></div></div>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="training.html">Training</a>
-  <a href="about.html">About</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="blog.html">Blog</a>
-  <a href="contact.html">Contact</a>
-</div>
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <img src="images/logo.png" alt="Faith & Fire Survival Logo" loading="lazy">
-    <h1>Our Mission & Instructors</h1>
-    <p><strong>Training rooted in faith, discipline, and stewardship.</strong></p>
-    <a href="training.html" class="cta-button">View Training</a>
-  </div>
+  <section class="page-hero" aria-label="About hero">
+    <div class="container">
+      <h1>About the Ministry</h1>
+      <p class="lead">We unite biblical teaching with practical survival skills—equipping people to serve with wisdom, courage, and compassion.</p>
+    </div>
   </section>
 
-<!-- SCRIPTURE -->
-<section class="scripture">
-  <p>“Be watchful, stand firm in the faith, act like men, be strong.”</p>
-  <span>— 1 Corinthians 16:13</span>
-  </section>
-<!-- WHY WE STARTED -->
-<section class="about-mission">
-  <h2>Why We Started Faith & Fire Survival</h2>
+  <main id="main">
+    <section aria-labelledby="story-title">
+      <div class="container grid grid-2">
+        <div>
+          <h2 id="story-title" class="section-title">Our Story</h2>
+          <p>Faith &amp; Fire Survival began with a simple conviction: preparedness is stewardship. As families and churches asked how to respond to uncertainty with peace instead of panic, this ministry formed to train both the heart and the hands.</p>
+          <p>We combine Scripture, leadership, and essential skills—so that individuals and families can be ready to care for one another and serve their communities in times of need.</p>
+        </div>
+        <div class="panel photo-panel" role="img" aria-label="Outdoor scene representing preparedness and peace"></div>
+      </div>
+    </section>
 
-  <p>
-    Faith & Fire Survival was born out of a conviction that true preparedness goes deeper than physical skill.
-    In a world growing more uncertain, we saw a need for training that strengthens both the body and the spirit.
-  </p>
+    <section aria-labelledby="distinctives-title" class="alt">
+      <div class="container">
+        <h2 id="distinctives-title" class="section-title">What Makes Us Different</h2>
+        <ul class="checklist">
+          <li><strong>Faith-first approach:</strong> Every skill ties to a biblical principle.</li>
+          <li><strong>Family-friendly training:</strong> Practical for all ages and skill levels.</li>
+          <li><strong>Service mindset:</strong> Prepared people are freed to serve others.</li>
+          <li><strong>Safety &amp; wisdom:</strong> We emphasize discernment, not fear.</li>
+        </ul>
+      </div>
+    </section>
 
-  <p>
-    Too often, survival education focuses solely on gear and technique, while faith is treated as separate or secondary.
-    We believe Scripture teaches otherwise. From the wilderness journeys of Israel to Christ’s time alone in the desert,
-    God has always used the outdoors to refine, teach, and strengthen His people.
-  </p>
+    <section aria-labelledby="faith-title">
+      <div class="container">
+        <h2 id="faith-title" class="section-title">Statement of Faith</h2>
+        <div class="grid grid-2">
+          <div class="card"><h3>Scripture</h3><p>The Bible is the authoritative Word of God—true, trustworthy, and sufficient.</p></div>
+          <div class="card"><h3>Salvation</h3><p>By grace through faith in Jesus Christ; we are called into a life of service.</p></div>
+          <div class="card"><h3>Community</h3><p>The Church is called to love and mutual care; preparedness helps us serve well.</p></div>
+          <div class="card"><h3>Stewardship</h3><p>Wisdom plans ahead—readiness is a practical expression of stewardship and love.</p></div>
+        </div>
+      </div>
+    </section>
 
-  <p>
-    Our mission is to equip men, women, and families with practical survival skills while deepening their walk with God —
-    building courage, resilience, and leadership that carries into everyday life.
-  </p>
-</section>
+    <section aria-labelledby="team-title" class="alt">
+      <div class="container">
+        <h2 id="team-title" class="section-title">Team</h2>
+        <div class="grid grid-3">
+          <article class="profile card"><div class="avatar" aria-hidden="true" style="background-image:url('assets/team/Derek.jpg');"></div><h3>Founder / Lead Instructor</h3><p class="muted">Bio, calling, and experience integrating faith & readiness.</p></article>
+          <article class="profile card"><div class="avatar" aria-hidden="true" style="background-image:url('assets/team/Andy.jpg');"></div><h3>Instructor</h3><p class="muted">Helps coordinate events, prayer,training, and resources.</p></article>
+          <article class="profile card"><div class="avatar" aria-hidden="true"  style="background-image:url('assets/team/advisor.jpg');"></div><h3>Advisors</h3><p class="muted">Pastoral and safety advisors who review materials and practices.</p></article>
+        </div>
+      </div>
+    </section>
 
-<!-- TEAM -->
-<section>
-  <h2>Our Team</h2>
-  <div class="about-container">
+    <section aria-label="Call to action">
+      <div class="container cta-band">
+        <p><strong>Want to bring this training to your church or small group?</strong></p>
+        <a class="btn primary" href="contact.html">Invite Us</a>
+      </div>
+    </section>
+  </main>
 
-    <!-- Derek -->
-    <article class="instructor">
-      <img src="images/Derek.jpg" class="about-img" alt="Derek Haber — Wilderness Instructor" loading="lazy">
-      <h3>Derek Haber</h3>
-      <p>Derek brings more than 25 years of expertise in wilderness survival, navigation, search & rescue, and emergency preparedness. His approach integrates proven survival techniques with timeless biblical principles, equipping individuals to thrive while fostering faith, resilience, and purpose.</p>
-    </article>
-
-    <!-- Andy -->
-    <article class="instructor">
-      <img src="images/Andy.jpg" class="about-img" alt="Andy Bell — Wilderness Instructor" loading="lazy">
-      <h3>Andy Bell</h3>
-      <p>Andy is an accomplished outdoor educator specializing in hiking, backcountry camping, and wilderness survival. He mentors students in both technical skills and spiritual growth, helping them develop confidence in the outdoors and in life.</p>
-    </article>
-
-  </div>
-</section>
-
-</main>
-
-<footer>Serving Jackson & Clay County, Missouri<br>
-© 2025 Faith & Fire Survival LLC</footer>
-<script src="js/main.js" defer></script>
+  <div data-include="partials/footer.html"></div>
+  <script src="assets/scripts.js"></script>
 </body>
 </html>
